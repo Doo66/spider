@@ -7,7 +7,7 @@ def get_content(target):
     req = requests.get(url = target)
     req.encoding = 'utf-8'
     html = req.text
-    # 利用lxml，解析提取到的html
+    # 使用beautifulsoup库，解析html
     bf = BeautifulSoup(html, 'lxml')
     # 小说内容在属性为content的div标签下
     # 提取小说内容
